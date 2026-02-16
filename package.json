@@ -1,0 +1,35 @@
+{
+  "name": "agent-interview-cli",
+  "version": "0.1.0",
+  "description": "Interactive web form for gathering structured responses — standalone CLI and library",
+  "author": "Nico Bailon",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "interview": "bin/interview.mjs"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/lib.js",
+      "types": "./dist/lib.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "form/",
+    "bin/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "tsup": "^8",
+    "typescript": "^5",
+    "vitest": "^4"
+  }
+}
